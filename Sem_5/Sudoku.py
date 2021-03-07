@@ -32,7 +32,7 @@ def print_grid(arr, input=False, x=0, y=0):
                     print(num, end=' ')
         print(' ')
         if (i==2 or i == 5):
-            print("---------------------")
+            print("------+-------+------")
 
 
 def busca_lugar_vacio(arr, l):
