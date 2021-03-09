@@ -24,7 +24,7 @@ def addEdge(v1, v2, e):
     elif v2 not in grapth:
         print("Vértice ", v2, " no existe")
     else:
-        # bruh
+        # where everything comes together
         temp = [v2, e]
         grapth[v1].append(temp)
 
@@ -88,9 +88,13 @@ def createDefaultMap(): #just foll0w the lines, child!!
 
 if (__name__=="__main__"):
     createDefaultMap()
-    printGrapth()
-    # print("-Programa de rutas de rumania-")
-    # print("¿Desea ver el mapa?")
+    print("-Programa de rutas de rumania-")
+    print("¿Desea ver el mapa? Si:1 No:0")
+    choice = int(input())
+    if choice:
+        printGrapth()
+    else:
+        print("duh~")
     # print("Ingrese el punto de salida, sin mayusculas")
     # inicio = input()
     # print("Ingrese el punto final")
