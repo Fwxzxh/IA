@@ -68,7 +68,7 @@ def used_in_box(arr, row, col, num):
 
 
 def check_location_is_safe(arr, row, col, num):
-    return not used_in_row(arr, row, num) and not used_in_col(arr, row, num) and not used_in_box(arr, row - row % 3, col - col % 3, num)
+    return not used_in_row(arr, row, num) and not used_in_col(arr, col, num) and not used_in_box(arr, row - row % 3, col - col % 3, num)
 
 
 def resuelve_sudoku(arr):
@@ -115,4 +115,4 @@ if (__name__ == "__main__"):
     if (resuelve_sudoku(grid)):
         print_grid(grid)
     else:
-        print ("¡¡No existen soluciones!! (╯°□°）╯︵ ┻━┻")
+        print("¡¡No existen soluciones!! (╯°□°）╯︵ ┻━┻")
