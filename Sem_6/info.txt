@@ -1,0 +1,10 @@
+# comentario
+diametro,tierra,12742 km
+diametro,marte,6779 km
+diametro,venus,12104 km
+# Cometario 2
+diametro,jupiter,139820,km
+capital,japon,tokio
+capital,mexico,Ciudad de mexico
+capital,francia,paris
+capital,canada,ottawa
