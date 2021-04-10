@@ -44,8 +44,6 @@ int main() {
 						else f[i+1][1][S>>1|(1<<m-1)|(1<<m-2)] += f[i][j][S];
 					}
 				}
-
 		printf("%lld\n", f[n+1][1][all]);
 	}
-
 	return 0;

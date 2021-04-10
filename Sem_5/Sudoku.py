@@ -1,4 +1,4 @@
-# Sudoku solving w Backtraking
+# Sudoku solving w Backtraking ☠
 
 from os import system, name
 
@@ -75,10 +75,8 @@ def resuelve_sudoku(arr):
     l = [0, 0]
     if (not busca_lugar_vacio(arr, l)):
         return True
-
     row = l[0]
     col = l[1]
-
     for num in range(1, 10):
         if (check_location_is_safe(arr, row, col, num)):
             arr[row][col] = num
@@ -111,7 +109,6 @@ if (__name__ == "__main__"):
                [1, 3, 0, 0, 0, 0, 2, 5, 0],
                [0, 0, 0, 0, 0, 0, 0, 7, 4],
                [0, 0, 5, 2, 0, 6, 3, 0, 0]]
-
     if (resuelve_sudoku(grid)):
         print_grid(grid)
     else:

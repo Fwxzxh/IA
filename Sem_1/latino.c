@@ -29,7 +29,7 @@ void imprime() {
     reverse();
     printf("Solucion: %d\n", ++total);
     for(i=0; i<n; ++i) {
-        for(j=0; j<n; ++j) printf("   %c, %lc", 64 + a[posic(i,j)], 96 + b[posic(i,j)]) ;
+        for(j=0; j<n; ++j) printf("   %c, %lc", 64 + a[posic(i,j)], 96 + b[posic(i,j)]);
         printf("\n");
     }
     printf("\n");
@@ -61,6 +61,7 @@ void resuelve() {
             --p;
         }
 }
+
 
 int main() {
     time_t inicio, fin;

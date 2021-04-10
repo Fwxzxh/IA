@@ -10,8 +10,8 @@ main = do
     let n = read linea :: Int
         r = esPrimo n
         fact = factPrimos n 2
-    putStrLn $ "Es primo? " ++ (show r)
-    putStrLn $ "Factores primos: " ++ (show fact)
+    putStrLn $ "Es primo? " ++ show r
+    putStrLn $ "Factores primos: " ++ show fact
 
 esPrimo :: Int -> Bool
 esPrimo n = (length [x | x <- [1..n], n `mod` x == 0]) == 2
@@ -19,7 +19,7 @@ esPrimo n = (length [x | x <- [1..n], n `mod` x == 0]) == 2
 factPrimos :: Int -> Int -> [Int]
 factPrimos 1 _ = []
 factPrimos n p
-    | mod n p == 0 = [p] ++ (factPrimos (div n p) p)
+    | mod n p == 0 = p : factPrimos (div n p) p
     | otherwise = factPrimos n (sigPrimo p)
 
 sigPrimo :: Int -> Int

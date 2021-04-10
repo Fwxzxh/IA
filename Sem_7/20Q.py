@@ -10,11 +10,13 @@ respuestas = []
 option = 0
 datasets = ("Data/small.csv","Data/medium.csv","Data/big.csv")
 
+
 def clear():
-    if name=='nt':
+    if name =='nt':
         _ = system('cls')
     else:
         _ = system('clear')
+
 
 def readCsv(option):
     global datasets
@@ -68,10 +70,9 @@ def printResult(candidatos, numOpciones):
     for i in range(numOpciones):
         if candidatos[i-1] != None:
             findedAnswer = True
-            print("El animal en el que piensas puede ser:",candidatos[i-1])
+            print("El animal en el que piensas puede ser:", candidatos[i-1])
     if not findedAnswer:
-        print("No encontre la respuesta :c")
-        a = writeQuestion("Desea agregar su respuesta?")
+        a = writeQuestion("No encontre la respuesta, ¿Desea agregar su respuesta?")
         if a:
             print("Ingrese el nombre del animal de tus respuestas")
             a = input()
@@ -85,7 +86,7 @@ def addAnswer(candidato, respuestas):
     respuestas.insert(0, candidato)
     print("Escribiendo en el dataset", datasets[option-1])
     with open(datasets[option-1], mode='a', newline='') as csv_file:
-        animal_writer = csv.writer(csv_file, dialect='unix')
+        animal_writer = csv.writer(csv_file)
         animal_writer.writerow(respuestas)
         pass
 
