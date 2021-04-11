@@ -16,7 +16,7 @@ def gen_Points(nPoints, nCluster):
     for i in range(nPoints):
         data.append([pointsX[i], pointsY[i]])
     add_scatter_series("Original Points", "",  pointsX, pointsY)
-    kmeans(data, nPoints, nCluster, 50)
+    kmeans(data, nPoints, nCluster, 100)
 
 
 def plotZones(zonas):
@@ -27,7 +27,7 @@ def plotZones(zonas):
         for elemento in zona:
             pointX.append(elemento[0])
             pointY.append(elemento[1])
-        ranColor = list(np.random.randint(256, size=3)) + [255,]
+        ranColor = list(np.random.randint(256, size=3)) + [255,] # buscar una mejor solución
         numZones += 1
         add_scatter_series("K-means draw", "zona "+ str(numZones), pointX, pointY, outline=ranColor)
         pointX = []
@@ -123,4 +123,3 @@ if __name__ == '__main__':
     gen_Points(nPoints, nClusters)
     set_main_window_size(1000, 800)
     start_dearpygui()
-    pass
