@@ -1,5 +1,5 @@
 # Nube de palabras
-#
+
 import wikipedia
 import re
 import matplotlib.pyplot as plt
@@ -19,6 +19,7 @@ if __name__ == '__main__':
         word = "GNU/Linux"
     else:
         pass
+
     wiki = wikipedia.page(word)
     text = wiki.content
     # cleaning...

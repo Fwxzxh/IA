@@ -1,5 +1,4 @@
 {-
-        Mejia Castro Jorge David Elihu
         cowsay like
 -}
 
